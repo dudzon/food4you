@@ -1,0 +1,30 @@
+{
+  "name": "food4you",
+  "version": "1.0.0",
+  "description": "HTML && CSS exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dudzon/food4you.git"
+  },
+  "author": "Tomasz Dudzinski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dudzon/food4you/issues"
+  },
+  "homepage": "https://github.com/dudzon/food4you#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "browser-sync": "^2.26.13",
+    "cssnano": "^4.1.10",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "postcss": "^8.1.4"
+  }
+}
