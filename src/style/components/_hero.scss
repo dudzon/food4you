@@ -1,0 +1,116 @@
+@import '../settings/base';
+
+.hero {
+  position: absolute;
+  margin-top: 5rem;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 13rem);
+  z-index: 20;
+}
+
+.hero-info {
+  width: 50%;
+  text-align: center;
+
+  &__title {
+    margin-top: 3rem;
+    font-family: $custom-font-secondary sans-serif;
+    font-size: 3.625rem;
+    color: $main-text-color;
+    position: relative;
+    &:before {
+      content: url('./../../images/Leaf1x.png');
+      position: absolute;
+      margin: -4rem 0 0 -7rem;
+    }
+    &:after {
+      content: url('./../../images/Pasta1.png');
+      position: absolute;
+      margin: -3rem 0 0 10rem;
+    }
+  }
+
+  &__text--primary {
+    margin: 1rem 0;
+    font-family: $custom-font-primary sans-serif;
+    font-size: 5.625rem;
+    text-transform: uppercase;
+  }
+  &__text--secondary {
+    padding-bottom: 2rem;
+    font-family: $main-font sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  }
+
+  &__additional-text {
+    margin: 3.5rem 0 2rem 0;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $custom-font-primary sans-serif;
+  }
+
+  &__button {
+    position: relative;
+    width: 14rem;
+    padding: 0.875rem;
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid $main-text-color;
+    font-size: 1.2rem;
+    font-family: $main-font;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:after {
+      content: url('./../../images/Tomato1x.png');
+      position: absolute;
+      margin: 10rem 0 0 15rem;
+    }
+  }
+}
+
+.hero-picture {
+  width: 50%;
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &:after {
+      content: url('./../../images/Leaf21x.png');
+      position: absolute;
+      margin: 35rem 0 0 35rem;
+    }
+  }
+}
+
+.additional-text__container {
+  align-self: flex-end;
+}
+
+.additional-text__message {
+  margin: 0 1rem 0.5rem 0;
+  height: 50%;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.additional-text__numbers {
+  font-size: 3.4375rem;
+}
+
+@media screen and (max-height: 800px) {
+  .hero-info__button:after {
+    margin: 5rem 0 0 15rem;
+  }
+  .hero-picture:after {
+    margin: 30rem 0 0 25rem;
+  }
+}
