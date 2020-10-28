@@ -1,0 +1,15 @@
+@import '../settings/base';
+
+.jumbotron {
+  @include jumbotronSize;
+  background-color: $jumbotron-primary;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+
+  &--secondary {
+    @include jumbotronSize;
+    background-color: $jumbotron-secondary;
+    clip-path: polygon(74% 0, 100% 0, 100% 100%, 54% 100%);
+  }
+}

@@ -1,0 +1,69 @@
+@import '../settings/base';
+
+.hero {
+  position: absolute;
+  margin-top: 5rem;
+  width: 100%;
+  z-index: 20;
+}
+
+.hero-info {
+  width: 50%;
+  text-align: center;
+
+  &__title {
+    margin-top: 3rem;
+    font-family: $custom-font-secondary sans-serif;
+    font-size: 3.625rem;
+    color: $main-text-color;
+  }
+
+  &__text--primary {
+    margin: 1rem 0;
+    font-family: $custom-font-primary sans-serif;
+    font-size: 5.625rem;
+    text-transform: uppercase;
+  }
+  &__text--secondary {
+    padding-bottom: 2rem;
+    font-family: $main-font sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  }
+
+  &__additional-text {
+    margin: 3.5rem 0 2rem 0;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $custom-font-primary sans-serif;
+  }
+
+  &__button {
+    width: 14rem;
+    padding: 0.875rem;
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid $main-text-color;
+    font-size: 1.2rem;
+    font-family: $main-font;
+    font-weight: 700;
+  }
+}
+
+.additional-text__container {
+  align-self: flex-end;
+}
+
+.additional-text__message {
+  margin: 0 1rem 0.5rem 0;
+  height: 50%;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.additional-text__numbers {
+  font-size: 3.4375rem;
+}
