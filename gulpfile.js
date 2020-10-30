@@ -11,13 +11,13 @@ const cssnano = require('cssnano');
 const config = {
     app: {
         scss: './src/style/**/*.scss',
-        fonts: './src/fonts/*',
+        // fonts: './src/fonts/*',
         images: './src/images/*.*',
         html: './src/*.html'
     },
     dist: {
         base: './dist/',
-        fonts: './dist/fonts',
+        // fonts: './dist/fonts',
         images: './dist/images'
     }
 }
@@ -31,11 +31,11 @@ function cssTask(done) {
     done();
 }
 
-function fontTask(done) {
-    src(config.app.fonts)
-        .pipe(dest(config.dist.fonts))
-    done();
-}
+// function fontTask(done) {
+//     src(config.app.fonts)
+//         .pipe(dest(config.dist.fonts))
+//     done();
+// }
 
 function imagesTask(done) {
     src(config.app.images)
@@ -51,7 +51,7 @@ function templateTask(done) {
 
 function watchFiles() {
     watch(config.app.scss, series(cssTask, reload));
-    watch(config.app.fonts, series(fontTask, reload));
+    // watch(config.app.fonts, series(fontTask, reload));
     watch(config.app.images, series(imagesTask, reload));
     watch(config.app.html, series(templateTask, reload));
 }
@@ -74,5 +74,5 @@ function cleanUp() {
     return del([config.dist.base]);
 }
 
-exports.dev = parallel( cssTask, fontTask, imagesTask, templateTask, watchFiles, liveReload);
-exports.build = series(cleanUp, parallel( cssTask, fontTask, imagesTask, templateTask));
+exports.dev = parallel( cssTask, imagesTask, templateTask, watchFiles, liveReload);
+exports.build = series(cleanUp, parallel( cssTask, imagesTask, templateTask));
