@@ -11,13 +11,11 @@ const cssnano = require('cssnano');
 const config = {
     app: {
         scss: './src/style/**/*.scss',
-        // fonts: './src/fonts/*',
-        images: './src/images/*.*',
+        images: './src/images/**/*.*',
         html: './src/*.html'
     },
     dist: {
         base: './dist/',
-        // fonts: './dist/fonts',
         images: './dist/images'
     }
 }
@@ -30,12 +28,6 @@ function cssTask(done) {
         .pipe(dest(config.dist.base))
     done();
 }
-
-// function fontTask(done) {
-//     src(config.app.fonts)
-//         .pipe(dest(config.dist.fonts))
-//     done();
-// }
 
 function imagesTask(done) {
     src(config.app.images)
