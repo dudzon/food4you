@@ -17,7 +17,6 @@ const config = {
     dist: {
         base: './dist/',
         images: './dist/images',
-        scss: './dist/styles/css',
     }
 }
 
@@ -26,7 +25,7 @@ function cssTask(done) {
         .pipe(sass({ outputStyle: 'expanded' }))
         .pipe(rename({ suffix: '.bundle' }))
         .pipe(postcss([autoprefixer(), cssnano()]))
-        .pipe(dest(config.dist.scss))
+        .pipe(dest(config.dist.base))
     done();
 }
 
