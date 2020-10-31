@@ -17,7 +17,7 @@ const config = {
     dist: {
         base: './dist/',
         images: './dist/images',
-        scss: './dist/scss',
+        scss: './dist/styles/css',
     }
 }
 
