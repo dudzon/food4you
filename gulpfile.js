@@ -16,7 +16,8 @@ const config = {
     },
     dist: {
         base: './dist/',
-        images: './dist/images'
+        images: './dist/images',
+        scss: './dist/scss',
     }
 }
 
@@ -25,7 +26,7 @@ function cssTask(done) {
         .pipe(sass({ outputStyle: 'expanded' }))
         .pipe(rename({ suffix: '.bundle' }))
         .pipe(postcss([autoprefixer(), cssnano()]))
-        .pipe(dest(config.dist.base))
+        .pipe(dest(config.dist.scss))
     done();
 }
 
@@ -43,7 +44,6 @@ function templateTask(done) {
 
 function watchFiles() {
     watch(config.app.scss, series(cssTask, reload));
-    // watch(config.app.fonts, series(fontTask, reload));
     watch(config.app.images, series(imagesTask, reload));
     watch(config.app.html, series(templateTask, reload));
 }
