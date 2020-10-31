@@ -1,9 +1,8 @@
 @import '../settings/base';
 .hero {
   position: absolute;
+  top: 10vh;
   width: 100%;
-  height: calc(100vh - 13rem);
-  z-index: 20;
   @include mq($until: xs) {
     margin-top: 5rem;
   }
