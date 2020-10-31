@@ -1,3 +1,4 @@
+@import '../settings/base';
 .hero {
   position: absolute;
   width: 100%;
@@ -202,7 +203,6 @@
     &:after {
       content: url('images/leafs/Leaf21x.png');
       position: absolute;
-      // margin: 35rem 0 0 35rem;
       display: none;
       @include mq($from: md) {
         display: block;
