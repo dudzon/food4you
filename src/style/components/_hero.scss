@@ -47,7 +47,7 @@
     }
 
     &:before {
-      content: url('./../../images/leafs/Leaf1x.png');
+      content: url('../../images/leafs/Leaf1x.png');
       position: absolute;
       margin: -4rem 0 0 -7rem;
       visibility: hidden;
@@ -57,7 +57,7 @@
       }
     }
     &:after {
-      content: url('./../../images/pasta/Pasta1.png');
+      content: url('../../images/pasta/Pasta1.png');
       position: absolute;
       margin: -3rem 0 0 10rem;
       display: none;
@@ -172,7 +172,7 @@
     }
 
     &:after {
-      content: url('./../../images/tomato/Tomato1x.png');
+      content: url('../../images/tomato/Tomato1x.png');
       position: absolute;
       margin: 10rem 0 0 15rem;
       display: none;
@@ -200,7 +200,7 @@
     }
 
     &:after {
-      content: url('./../../images/leafs/Leaf21x.png');
+      content: url('../../images/leafs/Leaf21x.png');
       position: absolute;
       // margin: 35rem 0 0 35rem;
       display: none;
