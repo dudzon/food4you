@@ -1,26 +1,49 @@
-// @import '../settings/base';
-
 .nav {
   position: absolute;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   z-index: 10;
 }
-.nav-list {
+.nav__list {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  @include mq($from: s) {
+    justify-content: flex-end;
+  }
 
-  &__item {
-    font-family: $main-font;
+  &-item {
+    font-family: applyFont($main-font, sans-serif);
     font-weight: 700;
-    padding-left: 6rem;
     letter-spacing: 3.33px;
     text-transform: uppercase;
+    @include mq($from: xs) {
+      font-size: 0.8rem;
+    }
+    @include mq($from: s) {
+      font-size: 1rem;
+      padding-left: 2rem;
+    }
+    @include mq($from: md) {
+      padding-left: 3rem;
+    }
+    @include mq($from: l) {
+      padding-left: 4rem;
+    }
+    @include mq($from: xxl) {
+      padding-left: 6rem;
+    }
 
     a {
       text-decoration: none;
       color: $main-text-color;
       cursor: pointer;
+      letter-spacing: 1px;
+      @include mq($until: xs) {
+        font-size: 0.7rem;
+      }
+      @include mq($from: xs) {
+        font-size: 0.8rem;
+      }
     }
   }
 }

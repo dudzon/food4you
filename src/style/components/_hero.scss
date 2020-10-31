@@ -1,116 +1,234 @@
-// @import '../settings/base';
-
 .hero {
   position: absolute;
-  margin-top: 5rem;
-  display: flex;
   width: 100%;
   height: calc(100vh - 13rem);
   z-index: 20;
+  @include mq($until: xs) {
+    margin-top: 5rem;
+  }
+  @include mq($from: xs) {
+    margin-top: 2rem;
+  }
+  @include mq($from: md) {
+    display: flex;
+    margin-top: 5rem;
+  }
 }
 
 .hero-info {
   width: 50%;
   text-align: center;
+  @include mq($until: md) {
+    width: 100%;
+  }
+
+  @include mq($from: xs) {
+    margin-top: 4rem;
+  }
+  @include mq($from: md) {
+    margin-top: 2rem;
+  }
 
   &__title {
-    margin-top: 3rem;
-    font-family: $custom-font-secondary sans-serif;
+    font-family: applyFont($custom-font-secondary, cursive);
     font-size: 3.625rem;
     color: $main-text-color;
     position: relative;
+    @include mq($until: xs) {
+      font-size: 1.8rem;
+      margin: -1.5rem 0 2rem 0;
+    }
+    @include mq($until: md) {
+      font-size: 2.5rem;
+      margin: -1.5rem 0 2rem 0;
+    }
+    @include mq($from: mdHeight, $media-feature: height) {
+      margin: 0 0 2rem 0;
+    }
+
     &:before {
       content: url('./../../images/Leaf1x.png');
       position: absolute;
       margin: -4rem 0 0 -7rem;
+      visibility: hidden;
+      @include mq($from: md) {
+        visibility: visible;
+        margin: -6rem 0 0 -2rem;
+      }
     }
     &:after {
       content: url('./../../images/Pasta1.png');
       position: absolute;
       margin: -3rem 0 0 10rem;
+      display: none;
+      @include mq($from: l) {
+        display: block;
+        margin: -8rem 0 0 30rem;
+      }
+      @include mq($from: xl) {
+        margin: -8rem 0 0 40rem;
+      }
+      @include mq($from: xxl) {
+        margin: -8rem 0 0 60rem;
+      }
+    }
+  }
+  &__image {
+    display: none;
+    @include mq($until: s) {
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+    }
+    @include mq($until: md) {
+      display: block;
+      width: 40%;
+      margin: 0 auto;
+    }
+    @include mq(
+      $from: mdHeight,
+      $media-feature: height,
+      $and: '(max-width:413px)'
+    ) {
+      width: 70%;
     }
   }
 
-  &__text--primary {
-    margin: 1rem 0;
-    font-family: $custom-font-primary sans-serif;
-    font-size: 5.625rem;
+  &__text-primary {
+    font-family: applyFont($custom-font-primary, cursive);
     text-transform: uppercase;
+    @include mq($until: s) {
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    @include mq($from: s) {
+      margin-bottom: 2.2rem;
+      font-size: 2rem;
+    }
+    @include mq($from: md) {
+      font-size: 3rem;
+    }
+    @include mq($from: l) {
+      font-size: 4rem;
+    }
+    @include mq($from: xl) {
+      font-size: 5rem;
+    }
+    @include mq($from: xxl) {
+      font-size: 5.625rem;
+    }
   }
-  &__text--secondary {
-    padding-bottom: 2rem;
-    font-family: $main-font sans-serif;
+  &__text-secondary {
+    font-family: applyFont($main-font, sans-serif);
     font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    @include mq($from: xl) {
+      padding-bottom: 2rem;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    }
   }
 
-  &__additional-text {
-    margin: 3.5rem 0 2rem 0;
+  &__text {
     height: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: $custom-font-primary sans-serif;
+    font-family: applyFont($custom-font-primary, sans-serif);
+    @include mq($until: s) {
+      margin: 1rem 0;
+    }
+    @include mq(
+      $from: mdHeight,
+      $media-feature: height,
+      $and: '(min-width:1300px)'
+    ) {
+      margin-top: 3rem;
+    }
+    @include mq($from: lHeight, $media-feature: height) {
+      margin: 3rem 0;
+    }
+  }
+
+  &__text-numbers {
+    font-size: 3.4375rem;
   }
 
   &__button {
     position: relative;
     width: 14rem;
     padding: 0.875rem;
+
     text-transform: uppercase;
     background: none;
     border: 1px solid $main-text-color;
     font-size: 1.2rem;
-    font-family: $main-font;
+    font-family: applyFont($main-font, sans-serif);
     font-weight: 700;
     cursor: pointer;
+    @include mq($from: mdHeight, $media-feature: height) {
+      margin-top: 3rem;
+    }
 
     &:after {
       content: url('./../../images/Tomato1x.png');
       position: absolute;
       margin: 10rem 0 0 15rem;
+      display: none;
+      @include mq($from: md) {
+        display: block;
+        margin: 1rem 0 0 15rem;
+      }
     }
   }
 }
-
 .hero-picture {
   width: 50%;
   &__image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     width: 100%;
     height: 100%;
-    position: relative;
+    display: none;
+    @include mq($from: md) {
+      display: block;
+    }
+    @include mq($from: xxl) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     &:after {
       content: url('./../../images/Leaf21x.png');
       position: absolute;
-      margin: 35rem 0 0 35rem;
+      // margin: 35rem 0 0 35rem;
+      display: none;
+      @include mq($from: md) {
+        display: block;
+        margin: 2rem 0 0 17rem;
+      }
+      @include mq($from: l) {
+        margin: -3rem 0 0 20rem;
+      }
+      @include mq($from: xl) {
+        margin: -15rem 0 0 35rem;
+      }
+      @include mq($from: xxl) {
+        margin: 20rem 0 0 45rem;
+      }
+    }
+    img {
+      width: 100%;
     }
   }
 }
-
-.additional-text__container {
+.text {
   align-self: flex-end;
 }
-
-.additional-text__message {
+.text__message {
   margin: 0 1rem 0.5rem 0;
   height: 50%;
   text-transform: uppercase;
   font-size: 1.2rem;
-}
-.additional-text__numbers {
-  font-size: 3.4375rem;
-}
-
-@media screen and (max-height: 800px) {
-  .hero-info__button:after {
-    margin: 5rem 0 0 15rem;
-  }
-  .hero-picture:after {
-    margin: 30rem 0 0 25rem;
-  }
 }

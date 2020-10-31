@@ -26,5 +26,8 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "postcss": "^8.1.4"
+  },
+  "dependencies": {
+    "@mcaskill/sass-mq": "^5.0.1"
   }
 }

@@ -1,6 +1,7 @@
 @import 'global';
-// @import 'fonts';
+@import 'node_modules/sass-mq-5.0.1/mq.scss';
 @import 'variables';
+@import 'functions';
 @import 'colors';
 @import 'layout';
 @import 'mixins';

@@ -1,13 +1,9 @@
-// @import '../settings/base';
-
 .header {
   position: relative;
   top: 0;
-  height: 8vh;
+  margin-top: 1rem;
   width: 100%;
-  margin-top: 2rem;
   z-index: 10;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,24 +11,38 @@
 .header__delivery {
   display: flex;
   align-items: flex-end;
+}
+.delivery-text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
-  &-text {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  padding-right: 0.8rem;
+  font-family: applyFont($main-font, sans-serif);
+  font-weight: 700;
 
-    padding-right: 0.8rem;
-    font-family: $main-font;
-    font-weight: 700;
-
-    &--message {
-      margin-bottom: 0.1875rem;
-      text-transform: uppercase;
-      text-align: right;
+  &__message {
+    margin-bottom: 0.1875rem;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 0.7rem;
+    @include mq($from: md) {
       font-size: 0.9rem;
     }
+  }
 
-    &--number {
+  &__number {
+    font-size: 0.9rem;
+    @include mq($from: xs) {
+      font-size: 1rem;
+    }
+    @include mq($from: md) {
+      font-size: 1.2rem;
+    }
+    @include mq($from: l) {
+      font-size: 1.4rem;
+    }
+    @include mq($from: xxl) {
       font-size: 1.7rem;
     }
   }
