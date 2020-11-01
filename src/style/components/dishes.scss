@@ -1,0 +1,115 @@
+@import '../settings/base';
+
+.dishes {
+  position: relative;
+  &__title {
+    margin: 2rem 0 1rem 0;
+    font-family: applyFont($custom-font-primary, cursive);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    @include mq($from: l) {
+      margin: 3rem 0;
+      font-size: 2rem;
+    }
+    @include mq($from: xl) {
+      font-size: 2.5rem;
+    }
+    @include mq($from: xxl) {
+      font-size: 3rem;
+    }
+  }
+
+  &__text {
+    font-family: applyFont($main-font, sans-serif);
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    @include mq($from: l) {
+      width: 75%;
+      margin: 0 auto;
+      font-size: 0.9rem;
+    }
+    @include mq($from: xl) {
+      font-size: 1.1rem;
+    }
+    @include mq($from: xxl) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__elements {
+    margin: 2rem 0;
+    @include mq($from: md) {
+      display: flex;
+      justify-content: center;
+    }
+    @include mq($from: xl) {
+      margin-top: 3rem;
+    }
+  }
+
+  &__element {
+    text-align: center;
+    font-family: applyFont($main-font, sans-serif);
+    margin-bottom: 1rem;
+    picture {
+      display: block;
+      @include mq($from: md) {
+        height: 13.25rem;
+      }
+      @include mq($from: xl) {
+        height: 19.75rem;
+      }
+      @include mq($from: xxl) {
+        height: 26.375rem;
+      }
+    }
+
+    &-picture {
+      height: 100%;
+    }
+
+    &-title {
+      margin: 1rem 0;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    &-text {
+      font-size: 0.8rem;
+      margin-bottom: 2rem;
+      @include mq($from: l) {
+        width: 80%;
+        margin: 0 auto 2rem auto;
+      }
+    }
+
+    &-button {
+      padding: 0.7rem;
+      width: 40%;
+      text-transform: uppercase;
+      font-family: applyFont($main-font, sans-serif);
+      font-weight: 700;
+      background: $jumbotron-primary;
+      border: none;
+      cursor: pointer;
+      @include mq($from: md) {
+        width: 50%;
+      }
+    }
+  }
+  &__decoration {
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    height: 8rem;
+    background: $jumbotron-secondary;
+    z-index: -10;
+    @include mq($from: xl) {
+      visibility: visible;
+    }
+  }
+}
