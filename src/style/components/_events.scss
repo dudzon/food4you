@@ -1,0 +1,81 @@
+.events {
+  margin-top: 5rem;
+  display: none;
+  @include mq($from: md) {
+    display: block;
+  }
+  &__header {
+    width: 80%;
+    margin: 0 auto 2rem auto;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__header-title {
+    margin: 1rem 0;
+    font-family: applyFont($main-font, sans-serif);
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  &__header-title-secondary {
+    margin: 1rem 0 2rem 0;
+    font-family: applyFont($custom-font-primary, cursive);
+    font-size: 2rem;
+    @include mq($from: xl) {
+      font-size: 2.5rem;
+    }
+    @include mq($from: xxl) {
+      font-size: 3rem;
+    }
+  }
+  &__header-text {
+    font-family: applyFont($main-font, sans-serif);
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    text-transform: none;
+    @include mq($from: xl) {
+      font-size: 1.1rem;
+    }
+    @include mq($from: xxl) {
+      font-size: 1.2rem;
+    }
+  }
+}
+.events__pictures {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  @include mq($until: md) {
+    display: none;
+  }
+  &-element {
+    img {
+      width: 100%;
+    }
+  }
+  &-element:first-child,
+  &-element:last-child {
+    flex-basis: 25%;
+    align-self: center;
+  }
+  &-element:nth-child(2) {
+    flex-basis: 50%;
+  }
+}
+.events__circles {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  @include mq($until: md) {
+    display: none;
+  }
+  div {
+    width: 0.8rem;
+    height: 0.8rem;
+    background: $indicator;
+    margin-left: 0.3rem;
+    border-radius: 50%;
+    &:first-child {
+      background: $jumbotron-primary;
+    }
+  }
+}
