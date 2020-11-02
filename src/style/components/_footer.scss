@@ -7,7 +7,7 @@
   line-height: 0.9rem;
   font-family: applyFont($main-font, sans-serif);
   font-size: 0.7rem;
-  color: $footer-text;
+  color: $secondary-text;
   @include mq($from: s) {
     background: url('images/footer/BG_Image0.75x-min.png') no-repeat;
     background-position: 80% 100%;
