@@ -113,11 +113,11 @@
         </div>
         <div class="dishes__decoration"></div>
     </section>
-    <section class="events container">
-        <header class="events__header">
-            <h3 class="events__header-title">Discover</h3>
-            <h4 class="events__header-title-secondary">Upcoming events</h4>
-            <p class="events__header-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    <section class="events section container">
+        <header class="section__header">
+            <h3 class="section__header-title">Discover</h3>
+            <h4 class="section__header-title-secondary">Upcoming events</h4>
+            <p class="section__header-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus
                 commodo viverra maecenas accumsan lacus vel facilisis.
             </p>
@@ -157,7 +157,7 @@
                 <p class="try__text">Most popular pasta</p>
             </a>
         </div>
-        <div class="try__element element-two">
+        <div class="try__element">
             <a href="" class="try__link">
                 <picture>
                     <source srcset="images/try-it/try-it20.5x-min.png" media="(max-width: 576px)">
@@ -168,7 +168,7 @@
                 <p class="try__text">More fun more taste</p>
             </a>
         </div>
-        <div class="try__element element-three">
+        <div class="try__element">
             <a href="" class="try__link">
                 <picture>
                     <source srcset="images/try-it/try-it30.5x-min.png" media="(max-width: 576p)">
@@ -179,6 +179,23 @@
                 <p class="try__text">Fresh &amp; chili</p>
             </a>
         </div>
+    </section>
+    <section class="form section container">
+        <header class="section__header">
+            <h3 class="section__header-title">Reservation</h3>
+            <h4 class="section__header-title-secondary">Book your table</h4>
+        </header>
+        <form action="#">
+            <fieldset class="form__main">
+                <input class=" form__input" type="text" name="name" id="name" placeholder="Name" required>
+                <input class="form__input" type="email" name="email" id="email" placeholder="Email" required>
+                <input class=" form__input" type="text" name="date" id="date" placeholder="Date" required>
+                <input class="form__input" type="text" name="time" id="time" placeholder="Time" required>
+                <input class="form__input" type="number" name="people" id="people" placeholder="People" min="1" max="10"
+                    required>
+                <button class="form__button">Find a table</button>
+            </fieldset>
+        </form>
     </section>
 
     <footer class="footer container">

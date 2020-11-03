@@ -4,41 +4,6 @@
   @include mq($from: md) {
     display: block;
   }
-  &__header {
-    width: 80%;
-    margin: 0 auto 2rem auto;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  &__header-title {
-    margin: 1rem 0;
-    font-family: applyFont($main-font, sans-serif);
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-  &__header-title-secondary {
-    margin: 1rem 0 2rem 0;
-    font-family: applyFont($custom-font-primary, cursive);
-    font-size: 2rem;
-    @include mq($from: xl) {
-      font-size: 2.5rem;
-    }
-    @include mq($from: xxl) {
-      font-size: 3rem;
-    }
-  }
-  &__header-text {
-    font-family: applyFont($main-font, sans-serif);
-    font-size: 0.9rem;
-    line-height: 1.1rem;
-    text-transform: none;
-    @include mq($from: xl) {
-      font-size: 1.1rem;
-    }
-    @include mq($from: xxl) {
-      font-size: 1.2rem;
-    }
-  }
 }
 .events__pictures {
   display: flex;
