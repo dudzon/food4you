@@ -5,8 +5,7 @@
   margin-top: 1rem;
 }
 .nav__list {
-  display: flex;
-  justify-content: space-between;
+  @include flexPosition($space-between);
   @include mq($from: s) {
     justify-content: flex-end;
   }

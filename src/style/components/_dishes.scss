@@ -39,8 +39,7 @@
   &__elements {
     margin: 2rem 0;
     @include mq($from: md) {
-      display: flex;
-      justify-content: center;
+      @include flexPosition($center);
     }
     @include mq($from: xl) {
       margin-top: 3rem;
