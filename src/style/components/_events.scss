@@ -6,9 +6,7 @@
   }
 }
 .events__pictures {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
+  @include flexPosition($space-between, $center);
   @include mq($until: md) {
     display: none;
   }
@@ -28,8 +26,7 @@
 }
 .events__circles {
   margin-top: 3rem;
-  display: flex;
-  justify-content: center;
+  @include flexPosition($center);
   @include mq($until: md) {
     display: none;
   }

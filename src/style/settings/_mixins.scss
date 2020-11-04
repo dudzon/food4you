@@ -2,3 +2,12 @@
   width: 100%;
   height: 100vh;
 }
+@mixin centerBlock {
+  margin: 0 auto;
+  display: block;
+}
+@mixin flexPosition($justify-content: $flex-start, $align-items: $flex-start) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}

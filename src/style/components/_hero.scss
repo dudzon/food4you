@@ -27,6 +27,9 @@
   @include mq($from: md) {
     margin-top: 2rem;
   }
+  @include mq($from: lHeight, $media-feature: height) {
+    margin-top: 6rem;
+  }
 
   &__title {
     font-family: applyFont($custom-font-secondary, cursive);
@@ -75,14 +78,12 @@
   &__image {
     display: none;
     @include mq($until: s) {
-      display: block;
+      @include centerBlock;
       width: 50%;
-      margin: 0 auto;
     }
     @include mq($until: md) {
-      display: block;
+      @include centerBlock;
       width: 40%;
-      margin: 0 auto;
     }
     @include mq(
       $from: mdHeight,
@@ -131,9 +132,7 @@
 
   &__text {
     height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexPosition($center, $center);
     font-family: applyFont($custom-font-primary, sans-serif);
     @include mq($until: s) {
       margin: 1rem 0;
@@ -193,9 +192,7 @@
       display: block;
     }
     @include mq($from: xxl) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexPosition(center, $center);
     }
 
     &:after {

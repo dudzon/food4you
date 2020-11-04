@@ -43,9 +43,7 @@
 
     &-element {
       margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-
+      @include flexPosition($flex-start, $center);
       span {
         padding-left: 0.5rem;
       }
@@ -55,8 +53,7 @@
     width: 80%;
     margin: 0 auto;
     @include mq($from: md) {
-      display: flex;
-      align-items: center;
+      @include flexPosition($flex-start, $center);
       margin-top: 1rem;
     }
     @include mq($from: xl) {
@@ -72,8 +69,7 @@
   }
   &__social {
     margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
+    @include flexPosition($space-between);
     @include mq($from: md) {
       margin: 0;
       width: 50%;
