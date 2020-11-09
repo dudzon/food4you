@@ -4,6 +4,9 @@
   @include mq($from: md) {
     display: block;
   }
+  @include mq($media-type: print) {
+    display: block;
+  }
 }
 .events__pictures {
   @include flexPosition($space-between, $center);
