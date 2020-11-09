@@ -13,6 +13,9 @@
     background-position: 80% 100%;
     background-size: cover;
   }
+  @include mq($media-type: print) {
+    background: $black;
+  }
 
   &__logo {
     margin-top: 1rem;
